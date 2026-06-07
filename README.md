@@ -15,7 +15,6 @@ C++ 轻量级排序算法库，实现冒泡排序、选择排序，支持泛型 
   - [默认排序（升序）](#默认排序升序)
   - [自定义比较器](#自定义比较器)
   - [接口详细说明](#接口详细说明)
-- [目录结构](#目录结构)
 - [贡献指南](#贡献指南)
 - [许可证](#许可证)
 
@@ -133,19 +132,6 @@ template<typename T, typename Compare>
 void selectionSort(T* arr, int len, Compare cmp = defaultCompare<T>);
 
 使用方式与冒泡排序完全一致。
-
-## 目录结构
-Sort/
-├── .gitattributes           # Git 属性配置
-├── .gitignore               # Git 忽略文件
-├── LICENSE.txt              # 开源许可证
-├── README.md                # 项目说明文档
-├── Sort.slnx                # Visual Studio 解决方案
-└── Sort/
-    ├── Sort.vcxproj         # VS 项目文件
-    ├── Sort.vcxproj.filters # 项目筛选器
-    ├── main.cpp             # 测试入口文件
-    └── sort.h               # 排序算法核心头文件
 
 ## 贡献指南
 欢迎提交 Issue 与 Pull Request 来改进本项目！
