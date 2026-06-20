@@ -37,4 +37,19 @@ namespace sort {
 			Swap(arr[i], arr[minn]);
 		}
 	}
+
+	// µØ¾«ÅÅÐò
+	template<typename T, typename Compare = decltype(&defaultCmp<T>)>
+	void gnomeSort(T* arr, int len, Compare cmp = defaultCmp<T>) {
+		int i = 0;
+		while (i < len) {
+			if (i == 0 || !cmp(arr[i - 1], arr[i])) {
+				i++;
+			}
+			else {
+				Swap(arr[i], arr[i - 1]);
+				i--;
+			}
+		}
+	}
 }
