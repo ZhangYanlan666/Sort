@@ -1,8 +1,8 @@
-// 用于实现不同算法的排序
+// 用于实现不同算法的排序 For implementing various sorting algorithms
 #pragma once
 
 namespace sort {
-	// 前置函数
+	// 前置函数 Predefined functions
 	template<typename T>
 	void Swap(T& a, T& b) {
 		T temp = a;
@@ -14,7 +14,7 @@ namespace sort {
 		return a > b;
 	}
 
-	// 冒泡排序
+	// 冒泡排序 Bubble Sort
 	template<typename T, typename Compare = decltype(&defaultCmp<T>)>
 	void bubbleSort(T* arr, int len, Compare cmp = defaultCmp<T>) {
 		for (int i = 0; i < len - 1; i++) {
@@ -25,7 +25,7 @@ namespace sort {
 			}
 		}
 	}
-	// 选择排序
+	// 选择排序 Selection Sort
 	template<typename T, typename Compare = decltype(&defaultCmp<T>)>
 	void selctionSort(T* arr, int len, Compare cmp = defaultCmp<T>) {
 		for (int i = 0; i < len - 1; i++){
@@ -38,7 +38,7 @@ namespace sort {
 		}
 	}
 
-	// 地精排序
+	// 地精排序 Gnome Sort
 	template<typename T, typename Compare = decltype(&defaultCmp<T>)>
 	void gnomeSort(T* arr, int len, Compare cmp = defaultCmp<T>) {
 		int i = 0;
