@@ -52,4 +52,15 @@ namespace sort {
 			}
 		}
 	}
+	// ≤Â»Î≈≈–Ú Insertion Sort
+	template<typename T, typename Compare = decltype(&defaultCmp<T>)>
+	void insertionSort(T* arr, int len, Compare cmp = defaultCmp<T>) {
+		for (int i = 1; i < len; i++) {
+			int j = i;
+			while (j > 0 && cmp(arr[j - 1], arr[j])) {
+				Swap(arr[j], arr[j - 1]);
+				j--;
+			}
+		}
+	}
 }
